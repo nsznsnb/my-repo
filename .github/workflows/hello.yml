@@ -1,12 +1,8 @@
 name: JSON functions
 on: push
 jobs:
-  if-action:
+  skip-or-run:
+    if: ${{ vars.USERNAME == 'octocat'}}
     runs-on: ubuntu-latest
     steps:
-      - run: exit 0
-      - run: echo "Success"
-        if: ${{ success()}}
-      - run: exit 1
-      - run: echo "Failure"
-        if: ${{ failure()}}
+      - run: echo "Hello"
