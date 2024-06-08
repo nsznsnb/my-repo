@@ -1,8 +1,9 @@
-name: JSON functions
+name: Naming
 on: push
 jobs:
-  skip-or-run:
-    if: ${{ vars.USERNAME == 'octocat'}}
+  print:
+    name: Super useful Job
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello"
+      - name: Amazing Sciprt
+        run: echo "Hello"
