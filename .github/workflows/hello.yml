@@ -1,8 +1,12 @@
 name: JSON functions
 on: push
 jobs:
-  skip-on-run:
+  if-action:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello"
-        if: ${{ contains(github.run_id, '1')}}
+      - run: exit 1
+      - run: echo "Failure"
+        if: ${{ failure()}}
+      - run: exit 0
+      - run: echo "Success"
+        if: ${{ success()}}
