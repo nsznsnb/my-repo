@@ -4,6 +4,6 @@ jobs:
   log:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "### Example Title :rocket:" >> "${GITHUB_STEP_SUMMARY}"
+      - run: echo "## Example Title :rocket:" >> "${GITHUB_STEP_SUMMARY}"
           echo "- first line" >> "${GITHUB_STEP_SUMMARY}"
           echo "- seconde line" >> "${GITHUB_STEP_SUMMARY}"
