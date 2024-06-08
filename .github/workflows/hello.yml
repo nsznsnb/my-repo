@@ -10,3 +10,4 @@ jobs:
       - env:
           EXAMPLE: OK
         run: echo "${{env.EXAMPLE}}"
+      - run: echo "${GITHUB_ACTOR}"
